@@ -1,3 +1,2 @@
-Пойманов Никита Витальевич 221-323
-https://drive.google.com/file/d/1PV52UfmQwyl5grBYIv_TxyqD_aSTTjbr/view?usp=sharing
-Забыл сделать pull request
+Акимов Артём 221-323
+ссылка на видео работы https://drive.google.com/file/d/1cUjxdKL8RaRQRJYooe7Ce-L-W3l4E7Sd/view?usp=sharing
