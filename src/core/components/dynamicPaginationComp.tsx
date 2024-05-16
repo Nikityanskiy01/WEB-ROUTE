@@ -1,30 +1,28 @@
-import styled from "styled-components"
-import { useDynamicPagination } from "../hooks/useDynamicPagination"
-import UniversityCard from "./funcComponents/UniversityCard"
+import styled from "styled-components";
+import { useDynamicPagination } from "../hooks/useDynamicPagination";
+import UniversityCard from "./funcComponents/UniversityCard";
 export const ObserverBlock = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	height: 50px;
-	background-color: red;
-`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 50px;
+  background-color: red;
+`;
 export const DynamicPagination = () => {
-	const { universitiesData, loading, ref } = useDynamicPagination()
+  const { universitiesData, loading, ref } = useDynamicPagination();
 
-	return (
-		<>
-			<div>
-				<div>
-					{universitiesData?.length > 0 &&
-						universitiesData.map((university, index) => (
-							<UniversityCard key={index} data={university} />
-						))}
-					{!loading && <ObserverBlock ref={ref} />}
-				</div>
-				{loading && 'Loading...' }
-			</div>
-		</>
-	)
-}
+  return (
+    <>
+      <div>
+        <div>
+          {universitiesData?.length > 0 &&
+            universitiesData.map((university, index) => <UniversityCard key={index} data={university} />)}
+          {!loading && <ObserverBlock ref={ref} />}
+        </div>
+        {loading && "Loading..."}
+      </div>
+    </>
+  );
+};
 
-export default DynamicPagination
+export default DynamicPagination;
