@@ -13,3 +13,4 @@ export const columns: ColumnsType<DataType> = [
         key: 'name',
     },
 ];
+export const LIMIT_LIST_SCHOOL = 15
