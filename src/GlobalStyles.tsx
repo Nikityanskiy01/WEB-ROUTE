@@ -12,7 +12,7 @@ export const GlobalStyles = createGlobalStyle`
     html, body {
         background-color: var(--theme);
         color: var(--text-color);
-        font-family: Arial, sans-serif; /* Добавили шрифт */
+        font-family: Arial, sans-serif;
     }
 
     *[data-theme=light] {
@@ -22,18 +22,18 @@ export const GlobalStyles = createGlobalStyle`
 
         a {
             color: var(--dark);
-            text-decoration: underline; /* Добавили подчеркивание для ссылок */
+            text-decoration: underline;
 
             &:hover {
-                color: darkblue; /* Изменили цвет при наведении на ссылку */
+                color: darkblue;
             }
         }
 
         button {
             background: var(--buttonColor);
             color: var(--dark);
-            border-radius: 4px; /* Добавили скругление углов для кнопок */
-            padding: 8px 16px; /* Изменили отступы кнопок */
+            border-radius: 4px;
+            padding: 8px 16px;
 
             &:disabled {
                 background: var(--buttonColorDisabled);
@@ -47,8 +47,8 @@ export const GlobalStyles = createGlobalStyle`
         thead, tbody, .ant-table-cell {
             background-color: var(--light) !important;
             color: var(--dark) !important;
-            border: 1px solid lightgrey; /* Добавили границу для ячеек таблицы */
-            padding: 8px; /* Изменили отступы ячеек таблицы */
+            border: 1px solid lightgrey;
+            padding: 8px;
         }
     }
 
@@ -59,18 +59,18 @@ export const GlobalStyles = createGlobalStyle`
 
         a {
             color: var(--light);
-            text-decoration: none; /* Убрали подчеркивание для ссылок */
+            text-decoration: none;
 
             &:hover {
-                color: lightblue; /* Изменили цвет при наведении на ссылку */
+                color: lightblue;
             }
         }
 
         button {
             background: var(--buttonColorDisabled);
             color: var(--light);
-            border-radius: 8px; /* Добавили более круглое скругление углов для кнопок */
-            padding: 12px 24px; /* Изменили отступы кнопок */
+            border-radius: 8px;
+            padding: 12px 24px;
 
             &:disabled {
                 background: var(--buttonColor);
@@ -84,8 +84,60 @@ export const GlobalStyles = createGlobalStyle`
         thead, tbody, .ant-table-cell {
             background-color: var(--dark) !important;
             color: var(--light) !important;
-            border: none; /* Убрали границу для ячеек таблицы */
-            padding: 12px; /* Изменили отступы ячеек таблицы */
+            border: none;
+            padding: 12px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        html, body {
+            font-size: 14px;
+        }
+
+        *[data-theme=light] {
+            button {
+                padding: 6px 12px;
+            }
+
+            thead, tbody, .ant-table-cell {
+                padding: 6px;
+            }
+        }
+
+        *[data-theme=dark] {
+            button {
+                padding: 8px 16px;
+            }
+
+            thead, tbody, .ant-table-cell {
+                padding: 8px;
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        html, body {
+            font-size: 12px;
+        }
+
+        *[data-theme=light] {
+            button {
+                padding: 4px 8px;
+            }
+
+            thead, tbody, .ant-table-cell {
+                padding: 4px;
+            }
+        }
+
+        *[data-theme=dark] {
+            button {
+                padding: 6px 12px;
+            }
+
+            thead, tbody, .ant-table-cell {
+                padding: 6px;
+            }
         }
     }
 `;
