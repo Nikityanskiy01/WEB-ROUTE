@@ -2,12 +2,13 @@ import { PDFDownloadLink } from "@react-pdf/renderer";
 import MyDocument from "./funcComponents/MyDocuments";
 import { useFormData } from "../hooks/useFormData";
 import { useState } from "react";
+import { IPdfData } from "../interfaces/Ipdfdata";
 
 const PdfForm = () => {
   const { handleSubmit, generatePdfFile, register, errors, formData } = useFormData();
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: IPdfData) => {
     setLoading(true);
     generatePdfFile(data);
     setTimeout(() => {
