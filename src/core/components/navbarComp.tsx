@@ -15,6 +15,22 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
+const NavBarStyle = styled.nav`
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding-inline: 1rem;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    
+    a, button {
+      margin: 0.5rem 0;
+    }
+  }
+`;
+
 const ChangeThemeButton = styled.button`
   color: --text-color;
   width: 70px;
@@ -33,7 +49,7 @@ export const Navbar = () => {
   const { changeTheme } = useCurrentTheme();
   return (
     <header>
-      <nav>
+      <NavBarStyle>
         <NavLink className={"link"} to={HOME_ROUTE}>
           Главная
         </NavLink>
@@ -56,7 +72,7 @@ export const Navbar = () => {
         )}
         <button onClick={handleLogin}>{!isAuth ? "Войти" : "Выйти"}</button>
         <ChangeThemeButton onClick={() => changeTheme()}></ChangeThemeButton>
-      </nav>
+      </NavBarStyle>
     </header>
   );
 };
